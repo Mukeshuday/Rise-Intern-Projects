@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Landing Page</title>
+    <!-- style-sheet -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- google-fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="navbar">
+        <div class="logo">
+        <img src="./assets/startupX.png" alt="StartupX Logo" class="logo-img" />
+        </div>
+        <nav class="nav-links">
+            <a href="#home">
+                Home
+            </a>
+            <a href="#features">
+                Features
+            </a>
+            <a href="#pricing">
+                Pricing
+            </a>
+            <a href="#testimonials">
+                Testimonials
+            </a>
+            <a href="#contact">
+                Contact
+            </a>
+        </nav>
+        <button class="signup-btn">
+            Sign Up
+        </button>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero" data-aos="flip-left">
+        <div class="hero-text">
+            <h1>SuperCharge Your Productivity with StartUpX</h1>
+            <p>A simple yet powerfuk tool to manage your workflow like a pro....</p>
+            <button class="cta">Get Started</button>
+        </div>
+
+        <div class="hero-img" data-aos="zoom-in-down">
+            <img src="./assets/startupX.png" alt="Hero illustration">
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features" data-aos="slide-right">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Real-time Sync</h3>
+                <p>Work across all your devices with real time updates.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Team Collabration</h3>
+                <p>Collabrate with you team seamlessly from anywhere.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Easy Integrations</h3>
+                <p>Connect with your favourite tools and services in seconds.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials" data-aos="fade-up-right">
+        <h2>What Our Users Say... #StartUpX</h2>
+        <div class="testimonials-cards">
+            <div class="testimonial">
+                <p>"StartUpX changed the way we work.Absolutely love it!"</p>
+                <span>- Priya, Product Manager</span>
+            </div>
+
+            <div class="testimonial">
+                <p>"Smooth, fast and super intuitive. Highly recommended."</p>
+                <span>- Arjun, Developer</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing" data-aos="flip-up">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <h3>Basic</h3>
+                <p>$0/month</p>
+                <button>Select</button>
+            </div>
+            <div class="price-card featured">
+                <h3>Pro</h3>
+                <p>$15/month</p>
+                <button>Start Free Trial</button>
+            </div>
+            <div class="price-card">
+                <h3>Enterprice</h3>
+                <p>Custom Pricing</p>
+                <button>Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Get in Touch</h2>
+    <form class="contact-form" id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+        <div class="alert" id="alert-box">Thank you! Your message has been received.</div>
+    </form>
+    </section>
+
+
+    <!-- Footer -->
+<!-- Footer -->
+<footer id="contact" class="footer" data-aos="fade-up">
+  <h4>Get in Touch</h4>
+  <div class="socials">
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+    <a href="mailto:youremail@example.com">Email</a>
+  </div>
+  <p>&copy; 2025 StartUpX. All rights reserved.</p>
+</footer>
+
+     <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1200, // animation duration
+        easing : 'ease-in-out',//smooth
+        once: true,     // only animate once on scroll
+        mirror : false
+    });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
