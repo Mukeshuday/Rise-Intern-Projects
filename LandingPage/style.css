@@ -230,7 +230,22 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #4f46e5;
-  margin-bottom: 2rem;
+  width: fit-content;
+  margin: 0 auto 2rem;
+  border-right: 2px solid #4f46e5;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #4f46e5; }
 }
 
 .testimonial-cards {
