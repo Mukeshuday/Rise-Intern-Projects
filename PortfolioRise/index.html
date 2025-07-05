@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mukesh | Portfolio</title>
+  <!-- CSS -->  
+  <link rel="stylesheet" href="./style.css" />  
+  <!-- Google Fonts -->  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />  
+  <!-- AOS Animation -->  
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />  
+  <!-- Font Awesome -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body><header class="navbar">
+  <div class="nav-logo flicker-text">
+    <span>M</span><span>u</span><span>k</span><span>e</span><span>s</span><span>h</span>
+    <span>U</span><span>d</span><span>a</span><span>y</span>
+    <span>k</span><span>u</span><span>m</span><span>a</span><span>r</span>
+  </div>
+  <nav class="nav-links">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <button onclick="downloadResume()" class="resume-btn" data-aos="zoom-in">
+      <i class="fas fa-file-download"></i> Resume
+    </button>
+  </nav>
+</header><!-- Hero Section --><section class="hero" id="hero" data-aos="fade-up">
+  <!-- Animated Background Waves -->
+  <div class="hero-bg-animation">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </div>
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Mukesh Udaya Kumar</span></h1>
+      <p class="typing-text">Frontend Developer | JavaScript Enthusiast | Real-Time App Builder</p>
+      <button class="cta button-shine">Explore Portfolio</button>
+    </div>
+    <div class="hero-image">
+      <img src="./image/mukeshpro.jpg" alt="Mukesh Udaya Kumar" />
+    </div>
+  </div>
+</section><!-- About Section --><section class="about" id="about" data-aos="fade-right">
+  <div class="about-wave-bg">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="rgba(255,255,255,0.025)" d="M0,160L60,144C120,128,240,96,360,112C480,128,600,192,720,208C840,224,960,192,1080,181.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L0,0Z">
+        <animate attributeName="d" dur="14s" repeatCount="indefinite" values="M0,160L60,144C120,128,240,96,360,112C480,128,600,192,720,208C840,224,960,192,1080,181.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L0,0Z; M0,80L80,96C160,112,320,160,480,170C640,180,800,140,960,120C1120,100,1280,160,1360,200L1440,240L1440,0L0,0Z; M0,160L60,144C120,128,240,96,360,112C480,128,600,192,720,208C840,224,960,192,1080,181.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L0,0Z" />
+      </path>
+    </svg>
+  </div>
+  <h2><i class="fas fa-user"></i> About Me</h2>
+  <div class="about-content">
+    <p>I’m a passionate Frontend Developer with a strong foundation in HTML, CSS, JavaScript, and Java. Currently contributing to 8 real-world projects in the RISE Internship by Tamizhan Skills.</p>
+    <p>I’ve completed Java Full Stack Developer training at TAP Academy and I’m focused on building elegant, responsive, and scalable web experiences.</p>
+  </div>
+</section><!-- Projects Section --><section class="projects-section" id="projects" data-aos="zoom-in-up">
+  <div class="projects-wave-bg">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="rgba(255,255,255,0.03)" d="M0,160L60,144C120,128,240,96,360,112C480,128,600,192,720,208C840,224,960,192,1080,181.3C1200,171,1320,181,1380,186.7L1440,192L1440,320L0,320Z">
+        <animate attributeName="d" dur="15s" repeatCount="indefinite" values="M0,160L60,144C120,128,240,96,360,112C480,128,600,192,720,208C840,224,960,192,1080,181.3C1200,171,1320,181,1380,186.7L1440,192L1440,320L0,320Z; M0,120L80,140C160,160,320,200,480,190C640,180,800,120,960,128C1120,136,1280,200,1360,240L1440,280L1440,320L0,320Z; M0,160L60,144C120,128,240,96,360,112C480,128,600,192,720,208C840,224,960,192,1080,181.3C1200,171,1320,181,1380,186.7L1440,192L1440,320L0,320Z" />
+      </path>
+    </svg>
+  </div>
+  <h2><i class="fas fa-code"></i> Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Weather App</h3>
+      <p>Live weather updates using OpenWeather API with animated icons and theme toggle.</p>
+      <a href="https://weatherapp-by-mukesh.netlify.app" target="_blank" class="project-link">🌦 View Live</a>
+    </div>
+    <div class="project-card">
+      <h3>Brahmi Joke Generator</h3>
+      <p>Async/await powered comedy app using Brahmanandam jokes JSON file + punchy effects.</p>
+      <a href="https://bramhi-jokes.netlify.app" target="_blank" class="project-link">😂 Try It</a>
+    </div>
+    <div class="project-card">
+      <h3>Pokedex Console</h3>
+      <p>Retro console UI with PokéAPI fetch, evolution stats, and animations. Pixel-perfect feel!</p>
+      <a href="https://pokedex-by-mike.netlify.app/" target="_blank" class="project-link">🎮 Explore</a>
+    </div>
+    <div class="project-card">
+      <h3>Todoist App</h3>
+      <p>To-do list application built using JavaScript with local storage and DOM handling.</p>
+      <a href="https://todoist-by-mukesh.netlify.app/" target="_blank" class="project-link">📝 View App</a>
+    </div>
+    <div class="project-card">
+      <h3>Quote Generator</h3>
+      <p>Inspirational quotes fetched from an API with elegant animations and DOM updates.</p>
+      <a href="https://quote-generator-by-mukesh.netlify.app/" target="_blank" class="project-link">💡 Get Inspired</a>
+    </div>
+    <div class="project-card">
+      <h3>Joke Generator</h3>
+      <p>Fun programming jokes fetched from API using async JavaScript and fade-in effects.</p>
+      <a href="https://joke-generator-by-mukesh.netlify.app/" target="_blank" class="project-link">🤣 Laugh Now</a>
+    </div>
+    <div class="project-card">
+      <h3>StartupX Portfolio</h3>
+      <p>Professional startup-themed animated landing page built with HTML, CSS, JS, AOS.</p>
+      <a href="https://startupx-by-mike.netlify.app/" target="_blank" class="project-link">🌐 Visit Site</a>
+    </div>
+    <div class="project-card">
+      <h3>Cardiovascular Disease Detection</h3>
+      <p>Academic project using Python & TensorFlow to predict heart conditions from retinal images using CNN.</p>
+    </div>
+    <div class="project-card">
+      <h3>Image-to-Text-to-Image using ML</h3>
+      <p>Academic deep learning project combining NLP and CNNs for text-caption generation and visual image regeneration.</p>
+    </div>
+  </div>
+</section><!-- Skills Section --><section class="skills-section" id="skills" data-aos="zoom-in-up">
+  <h2><i class="fas fa-tools"></i> Skills</h2>
+  <div class="skills-bars">
+    <div class="skill-bar"><span style="width: 95%">HTML</span></div>
+    <div class="skill-bar"><span style="width: 95%">CSS / Flexbox / Animations</span></div>
+    <div class="skill-bar"><span style="width: 85%">JavaScript (DOM + API)</span></div>
+    <div class="skill-bar"><span style="width: 90%">Java / OOP / DSA</span></div>
+    <div class="skill-bar"><span style="width: 75%">React.js + Redux</span></div>
+    <div class="skill-bar"><span style="width: 70%">Spring Boot</span></div>
+    <div class="skill-bar"><span style="width: 65%">PostgreSQL / MySQL</span></div>
+  </div>
+</section><!-- Contact Section --><section class="contact" id="contact" data-aos="fade-up">
+  <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+  <form id="contact-form" class="contact-form">
+    <div class="form-group">
+      <input type="text" id="name" required />
+      <label for="name">Your Name</label>
+    </div>
+    <div class="form-group">
+      <input type="email" id="email" required />
+      <label for="email">Your Email</label>
+    </div>
+    <div class="form-group">
+      <textarea id="message" rows="5" required></textarea>
+      <label for="message">Your Message</label>
+    </div>
+    <button type="submit" class="cta button-shine">Send Message</button>
+    <div id="success-banner" class="success-banner">✅ Message sent successfully!</div>
+  </form>
+</section><!-- Footer --><footer class="footer" data-aos="fade-up">
+  <p><i class="fas fa-terminal"></i> &copy; <span id="year"></span> Mukesh Udaya Kumar | Built with <span class="heart">❤</span> using JavaScript</p>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/mukesh-udayakumar/" target="_blank">LinkedIn</a>
+    <a href="mailto:devmukesh.in06@gmail.com">Email</a>
+    <a href="https://mukesh-devfolio.netlify.app/" target="_blank">Portfolio</a>
+  </div>
+</footer><!-- Scripts -->  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><script>
+  AOS.init({ duration: 1200, once: true, easing: 'ease-in-out' });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>  <script src="script.js"></script></body>
+</html>
