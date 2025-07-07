@@ -1,0 +1,337 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background-size: 200% 200%;
+  animation: bgShift 12s ease infinite;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Builder Layout === */
+.builder-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 20px;
+  background: rgba(30, 41, 59, 0.4);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.4), 0 0 60px rgba(79, 70, 229, 0.3);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 2rem;
+}
+
+/* === Form Section === */
+.builder-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem 2rem;
+}
+
+.builder-form h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #facc15;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: color 0.3s ease;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.8);
+  color: #f1f5f9;
+  box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.05);
+  outline: none;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #8b5cf6;
+  background: rgba(30, 41, 59, 0.9);
+  box-shadow: 0 0 6px rgba(139, 92, 246, 0.4);
+}
+
+input:hover,
+textarea:hover {
+  border-color: #4f46e5;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+/* === Button === */
+button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3730a3, #6d28d9);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+/* === Resume Preview === */
+.resume-preview {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 2px solid #475569;
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.02);
+  overflow-y: auto;
+  max-height: 90vh;
+  position: relative;
+}
+
+.resume-header h1 {
+  font-size: 1.8rem;
+  color: #facc15;
+  margin-bottom: 0.3rem;
+}
+
+.resume-header p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 1.2rem;
+}
+
+.resume-section h3 {
+  font-size: 1.1rem;
+  color: #a78bfa;
+  margin-bottom: 0.5rem;
+}
+
+.resume-section p,
+.resume-summary p {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.resume-section ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+  color: #e5e7eb;
+}
+
+.resume-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Base */
+.resume-preview {
+  transition: all 0.4s ease;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* === Template Styles === */
+
+.template-modern {
+  background: #f9fafb;
+  color: #1f2937;
+  font-family: 'Poppins', sans-serif;
+  border-left: 6px solid #4f46e5;
+  padding: 2rem;
+}
+
+.template-modern h1,
+.template-modern h3 {
+  color: #4f46e5;
+}
+
+/* CREATIVE TEMPLATE */
+.template-creative {
+  background: linear-gradient(to bottom right, #ffe4e6, #fef9c3);
+  color: #1e293b;
+  font-family: 'Comic Neue', cursive;
+  padding: 2rem;
+  border: 2px dashed #e11d48;
+}
+
+.template-creative h1 {
+  font-family: 'Pacifico', cursive;
+  color: #be123c;
+  font-size: 2rem;
+}
+
+.template-creative h3 {
+  color: #ea580c;
+}
+
+/* FORMAL TEMPLATE */
+.template-formal {
+  background: #f8f9fa;
+  color: #111827;
+  font-family: 'Georgia', serif;
+  padding: 2rem;
+  border: 1px solid #9ca3af;
+}
+
+.template-formal h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.template-formal h3 {
+  color: #374151;
+  font-weight: 600;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 4px;
+}
+
+.template-minimalist {
+  background: #ffffff;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  letter-spacing: 0.3px;
+}
+
+.template-minimalist h1 {
+  font-size: 1.8rem;
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.template-minimalist h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.template-neon {
+  background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+  color: #e0f2fe;
+  font-family: 'Orbitron', sans-serif;
+  padding: 2rem;
+  border: 1px solid #00d4ff;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #08f;
+}
+
+.template-neon h1 {
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 6px #0ff;
+}
+
+.template-neon h3 {
+  color: #93c5fd;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.template-techwave {
+  background: #0e0e10;
+  color: #d1d5db;
+  font-family: 'Rajdhani', sans-serif;
+  padding: 2rem;
+  border: 1px solid #4ade80;
+  box-shadow: 0 0 25px rgba(74, 222, 128, 0.3);
+}
+
+.template-techwave h1 {
+  font-size: 2rem;
+  color: #4ade80;
+  text-transform: uppercase;
+}
+
+.template-techwave h3 {
+  color: #34d399;
+  border-bottom: 1px dashed #4ade80;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+
+
+/* === Dropdown Styling === */
+#template-selector {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  background: #1f2937;
+  color: #f9fafb;
+  border: 2px solid #8b5cf6;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5L8 11l6.5-5.5H1.5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: border 0.3s, background 0.3s;
+}
+
+#template-selector:hover {
+  border-color: #a78bfa;
+}
+
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .builder-container {
+    flex-direction: column;
+  }
+
+  .builder-form,
+  .resume-preview {
+    min-width: 100%;
+    padding: 1rem;
+  }
+
+  .resume-preview {
+    max-height: none;
+    margin-top: 2rem;
+  }
+}

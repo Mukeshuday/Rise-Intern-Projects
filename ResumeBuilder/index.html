@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create a stunning Digital resume using our intuitive Builder." />
+  <title>Digital Resume Builder | Mukesh</title>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Style-Sheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- ==== Navbar ==== -->
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-briefcase"></i> Resume <span>Builder</span></div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#templates">Templates</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="Builder.html" class="nav-cta">Launch Builder</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==== Hero Section ==== -->
+  <header class="hero-section" id="home">
+    <div class="hero-content">
+      <h1><i class="fas fa-rocket"></i> <span>Build</span> Your Digital Resume</h1>
+      <p>Create a polished resume in minutes with our modern, intuitive resume builder — 100% free, zero hassle.</p>
+      <a href="Builder.html" class="cta-btn"><i class="fas fa-play-circle"></i> Start Now</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="./assets/resume_4822911.png" alt="Resume Builder Illustration" />
+    </div>
+  </header>
+
+  <!-- ==== Features Section ==== -->
+  <section id="features" class="features-section">
+    <h2><i class="fas fa-bolt"></i> Why Choose Us?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-eye fa-2x feature-icon"></i>
+        <h3>Live Preview</h3>
+        <p>See changes instantly as you fill your resume details.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-clone fa-2x feature-icon"></i>
+        <h3>Custom Templates</h3>
+        <p>Pick from modern, ATS-friendly templates designed to impress.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-file-download fa-2x feature-icon"></i>
+        <h3>Download Instantly</h3>
+        <p>Export your resume as PDF with a single click!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== Template Showcases ==== -->
+  <section class="template-section" id="templates">
+    <h2><i class="fas fa-file-alt"></i> Choose Your Style</h2>
+    <div class="template-preview">
+      <div class="template-card">
+        <img src="./assets/Template-1.webp" alt="Template 1" />
+        <p>Modern & Clean</p>
+      </div>
+      <div class="template-card">
+        <img src="./assets/Template-2.webp" alt="Template 2" />
+        <p>Creative Edge</p>
+      </div>
+      <div class="template-card">
+        <img src="./assets/Template-3.webp" alt="Template 3" />
+        <p>Neon Glow</p>
+      </div>
+      <div class="template-card">
+        <img src="./assets/Template-4.webp" alt="Template 3" />
+        <p>Minimalist</p>
+      </div>
+      <div class="template-card">
+        <img src="./assets/Template-5.webp" alt="Template 3" />
+        <p>Tech Wave</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==== About Section ==== -->
+  <section class="about-section" id="about">
+    <h2><i class="fas fa-code"></i> About This Project</h2>
+    <p>This Resume Builder is part of the <strong>RISE Internship</strong> by <strong>Tamizhan Skills</strong>.</p>
+    <p>It demonstrates frontend mastery in <strong>HTML, CSS, SCSS, JavaScript</strong>, real-time preview logic, and responsive design.</p>
+  </section>
+
+  <!-- ==== Footer ==== -->
+  <footer class="footer">
+    <p>
+      <i class="fas fa-terminal"></i> &copy; <span id="year"></span> Mukesh Udaya Kumar |
+      Built with <span class="heart"><i class="fas fa-heart-pulse"></i></span> using JavaScript
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

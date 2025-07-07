@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder - Mukesh</title>
+  <link rel="stylesheet" href="./builder.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@400;600&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="builder-container">
+
+    <!-- 🔧 Left Section: Form Inputs -->
+    <section class="builder-form">
+      <h2><i class="fas fa-pencil-alt"></i> Fill Your Resume Details</h2>
+
+      <!-- Basic Info -->
+      <label><i class="fas fa-user"></i> Full Name</label>
+      <input type="text" id="input-name" placeholder="Enter your full name" />
+
+      <label><i class="fas fa-envelope"></i> Email</label>
+      <input type="email" id="input-email" placeholder="Enter your email" />
+
+      <label><i class="fas fa-phone"></i> Phone</label>
+      <input type="text" id="input-phone" placeholder="Enter your phone number" />
+
+      <!-- Education -->
+      <label><i class="fas fa-graduation-cap"></i> Education</label>
+      <textarea id="input-education" placeholder="E.g. B.Tech in CSE from XYZ University, 2022"></textarea>
+
+      <!-- Experience -->
+      <label><i class="fas fa-briefcase"></i> Experience</label>
+      <textarea id="input-experience" placeholder="Describe your work or internships here..."></textarea>
+
+      <!-- Skills -->
+      <label><i class="fas fa-laptop-code"></i> Skills</label>
+      <textarea id="input-skills" placeholder="List skills separated by commas (e.g. HTML, CSS, JavaScript)"></textarea>
+
+      <!-- Summary -->
+      <label><i class="fas fa-user-edit"></i> Professional Summary</label>
+      <textarea id="input-summary" placeholder="Brief introduction about you"></textarea>
+
+    <div class="template-switcher">
+    <label for="template-selector">🎨 Choose Resume Template</label>
+    <select id="template-selector">
+        <option value="template-formal">📄 Formal</option>
+        <option value="template-modern">🧑‍💻 Modern</option>
+        <option value="template-techwave">💻 TechWave</option>
+        <option value="template-minimalist">🧘 Minimalist</option>
+        <option value="template-neon">🌈 Neon Glow</option>
+        <option value="template-creative">🎨 Creative</option>
+    </select>
+    </div>
+
+
+      <button onclick="downloadPDF()">
+        <i class="fas fa-file-download"></i> Download Resume
+      </button>
+    </section>
+
+    <!-- 📄 Right Section: Live Resume Preview -->
+    <section class="resume-preview" id="resume-preview">
+      <div class="resume-header">
+        <h1 id="preview-name">Your Name</h1>
+        <p id="preview-contact">Email | Phone</p>
+      </div>
+
+      <div class="resume-summary">
+        <h3><i class="fas fa-align-left"></i> Summary</h3>
+        <p id="preview-summary">Your summary will appear here...</p>
+      </div>
+
+      <div class="resume-section">
+        <h3><i class="fas fa-university"></i> Education</h3>
+        <p id="preview-education">Education details...</p>
+      </div>
+
+      <div class="resume-section">
+        <h3><i class="fas fa-briefcase"></i> Experience</h3>
+        <p id="preview-experience">Experience details...</p>
+      </div>
+
+      <div class="resume-section">
+        <h3><i class="fas fa-tools"></i> Skills</h3>
+        <ul id="preview-skills"></ul>
+      </div>
+    </section>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="./builder.js"></script>
+</body>
+</html>
