@@ -2,7 +2,7 @@
 
 function downloadResume() {
   const link = document.createElement("a");
-  link.href = "./image/Mukeshresume main.pdf";
+  link.href = "./image/Mukesh-ATS updated.pdf";
   link.download="Mukesh_UdayaKumar_Resume.pdf";
   document.body.appendChild(link);
   link.click();
