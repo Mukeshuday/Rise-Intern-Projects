@@ -58,7 +58,7 @@ const templateSelector = document.getElementById('template-selector');
 const preview = document.getElementById('resume-preview');
 
 templateSelector.addEventListener('change', function () {
-  preview.classList.remove('template-modern', 'template-creative', 'template-formal');
+  preview.classList.remove('template-modern', 'template-creative', 'template-formal','template-neon','template-techwave','template-minimalist');
   preview.classList.add(this.value);
 });
 
