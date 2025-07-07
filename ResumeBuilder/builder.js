@@ -35,7 +35,7 @@ document.getElementById("input-skills").addEventListener("input", function () {
   const skillsInput = this.value;
   const skillList = document.getElementById("preview-skills");
   skillList.innerHTML = "";
-  
+
   if (skillsInput.trim() === "") {
     const li = document.createElement("li");
     li.textContent = "Skill list will appear here...";
@@ -43,9 +43,9 @@ document.getElementById("input-skills").addEventListener("input", function () {
     skillList.appendChild(li);
     return;
   }
-  
+
   const skills = skillsInput.split(",").map(skill => skill.trim()).filter(skill => skill.length > 0);
-  
+
   skills.forEach(skill => {
     const li = document.createElement("li");
     li.textContent = skill;
@@ -53,9 +53,6 @@ document.getElementById("input-skills").addEventListener("input", function () {
   });
 });
 
-document.getElementById("input-professionalSummary").addEventListener("input", function () {
-  document.getElementById("preview-professionalSummary").textContent = this.value || "Professional Summary details...";
-});
 
 const templateSelector = document.getElementById('template-selector');
 const preview = document.getElementById('resume-preview');
