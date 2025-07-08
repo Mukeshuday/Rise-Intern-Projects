@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todoist Pro | Mukesh</title>
+  
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Main Container -->
+  <main class="todo-container">
+
+    <!-- Sidebar / Filter Settings -->
+    <aside class="sidebar">
+      <h2>Todoist<span> Pro</span></h2>
+      <ul class="filter-list">
+        <li><button id="all-btn">All</button></li>
+        <li><button id="active-btn">Active</button></li>
+        <li><button id="completed-btn">Completed</button></li>
+      </ul>
+      <div class="theme-toggle">
+        <span class="toggle-label">Theme</span>
+        <button id="theme-btn"><i class="fas fa-moon"></i></button>
+      </div>
+    </aside>
+
+    <!-- Main Task Area -->
+    <section class="todo-main">
+      
+      <!-- Header -->
+      <header class="header">
+        <h1>Hey Mukesh! What's the plan for today?</h1>
+        <form id="task-form">
+          <input type="text" id="task-input" placeholder="Add a new task..." required />
+
+          <!-- Task Deadline -->
+          <input type="date" id="task-date" title="Deadline" />
+
+          <!-- Priority Dropdown -->
+          <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+
+          <!-- Submit Button -->
+          <button type="submit" class="add-task"><i class="fas fa-plus"></i></button>
+        </form>
+      </header>
+
+      <!-- Task List Area -->
+      <div class="task-list" id="task-list">
+        <!-- JS will inject task items here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Your Main JS -->
+  <script src="./script.js"></script>
+
+</body>
+</html>
