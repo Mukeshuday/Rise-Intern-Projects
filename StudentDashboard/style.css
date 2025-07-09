@@ -18,7 +18,7 @@ body.light-theme .add-student-btn {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: #ff8ba7;
+  background: #33272a;
   color: #fffffe;
   border: none;
   border-radius: 50%;
@@ -31,7 +31,8 @@ body.light-theme .add-student-btn {
 }
 
 body.light-theme .add-student-btn:hover {
-  background: #33272a;
+  background: white;
+  color: #ff8ba7;
   transform: scale(1.1);
 }
 
@@ -65,7 +66,7 @@ body.light-theme .grades-table th,
   text-align: center;
 }
 
-body.light-theme .grades-table th {
+body.light-theme .grades-table th,.student-table th {
   background: #1a1a24;
   color: #fffaf0;
 }
@@ -101,11 +102,14 @@ body.light-theme .sidebar {
 }
 
 body.light-theme .sidebar-header h2,
-body.light-theme .nav-menu li.active,
-body.light-theme .stat-card h3,
-body.light-theme .student-table th {
+body.light-theme .nav-menu li.active {
   color: #33272a;
 }
+
+body.light-theme .stat-card h3{
+  color: #fffaf0;
+}
+
 
 body.light-theme .nav-menu li {
   color: #594a4e;
@@ -122,29 +126,23 @@ body.light-theme .top-bar h1 {
 }
 
 body.light-theme .search-box {
-  background: #fff5ee;
-  color: #33272a;
+  background: #33272a;
+  color: #fffaf0;
+  border-color: #fffaf0;
+}
+
+body.light-theme .search-box::placeholder{
+  color: #fffaf0;
 }
 
 body.light-theme .stat-card {
-  border-color: #ff8ba7;
-  background: #fffaf0;
+  border-color: #fff;
+  background: #33272a;
 }
 
-body.light-theme .table-section,
-body.light-theme .attendance-section,
-body.light-theme .grades-section {
-  background: rgba(255, 255, 255, 0.7);
-  color: #33272a;
-}
 
-body.light-theme .student-table th {
-  background: #ffe4e1;
-}
-
-body.light-theme .student-table td,
-body.light-theme .attendance-table td {
-  color: #594a4e;
+body.light-theme .student-table td,.grades-table td {
+  color:#fffaf0;
 }
 
 body.light-theme .edit-btn,
@@ -157,19 +155,19 @@ body.light-theme .edit-btn:hover {
 }
 
 body.light-theme .delete-btn:hover {
-  color: #c3f0ca;
+  color: red;
 }
 
 body.light-theme .stat-card p {
-  color: #33272a;
-}
-
-body.light-theme .user-avatar i {
   color: #fffaf0;
 }
 
+body.light-theme .user-avatar i {
+  color: #33272a;
+}
+
 body.light-theme .modal {
-  background: #fffaf0;
+  background: #ff8ba7;
   border: 1px solid #ffc6c7;
   color: #33272a;
 }
@@ -187,6 +185,19 @@ body.light-theme .btn:hover {
   color: #fff;
 }
 
+body.light-theme .student-table,.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #16161e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+body.light-theme .student-table th{
+  background-color: #0f0e17;
+  color: #fffaf0;
+}
 
 
 /* dark-theme */

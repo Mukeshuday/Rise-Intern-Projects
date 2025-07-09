@@ -25,28 +25,23 @@ if(savedTheme === "light"){
 
 navItems.forEach(item => {
   item.addEventListener("click", () => {
-    // Highlight active nav item
     navItems.forEach(i => i.classList.remove("active"));
     item.classList.add("active");
 
     const sectionToShow = item.getAttribute("data-section") + "-section";
 
     contentSections.forEach(section => {
-      section.style.display = section.id === sectionToShow ? "block" : "none";
+      section.style.display = "none";
     });
 
-    if(sectionToShow === "attendance-section") {
-      renderAttendance();
+    const activeSection = document.getElementById(sectionToShow);
+    if (activeSection) {
+      activeSection.style.display = "block";
     }
 
-    contentSections.forEach(section => {
-      section.style.display = section.id === sectionToShow ? "block" : "none";
-    
-      if (section.id === "grades-section") renderGrades();
-});
-
-
-    
+    //  Conditional rendering
+    if (sectionToShow === "attendance-section") renderAttendance();
+    if (sectionToShow === "grades-section") renderGrades();
   });
 });
 
@@ -164,15 +159,14 @@ function renderAttendance() {
   const tbody = document.getElementById("attendance-body");
   tbody.innerHTML = "";
 
-  students.forEach(student => {
+  const records = JSON.parse(localStorage.getItem("attendanceRecords")) || [];
+  const today = new Date().toISOString().split("T")[0];
 
+  students.forEach(student => {
     const saved = records.find(r => r.studentId === student.studentId && r.date === today);
     const selected = saved ? saved.status : "Present";
 
     const tr = document.createElement("tr");
-
-    // Default date = today
-    const today = new Date().toISOString().split("T")[0];
 
     tr.innerHTML = `
       <td>${student.name}</td>
@@ -180,9 +174,9 @@ function renderAttendance() {
       <td>${today}</td>
       <td>
         <select class="attendance-status" data-student-id="${student.studentId}" data-date="${today}">
-          <option value="Present" selected>Present</option>
-          <option value="Absent">Absent</option>
-          <option value="Leave">Leave</option>
+          <option value="Present" ${selected === "Present" ? "selected" : ""}>Present</option>
+          <option value="Absent" ${selected === "Absent" ? "selected" : ""}>Absent</option>
+          <option value="Leave" ${selected === "Leave" ? "selected" : ""}>Leave</option>
         </select>
       </td>
     `;
