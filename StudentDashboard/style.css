@@ -1,0 +1,798 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background: #0f0e17;
+  color: #fffffe;
+  overflow-x: hidden;
+}
+
+/* === Light Theme === */
+
+body.light-theme .add-student-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #ff8ba7;
+  color: #fffffe;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 10000;
+}
+
+body.light-theme .add-student-btn:hover {
+  background: #33272a;
+  transform: scale(1.1);
+}
+
+
+body.light-theme .settings-panel button {
+  padding: 0.8rem 1.2rem;
+  background: #fffaf0;
+  color: #ff8ba7;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.light-theme .settings-panel button:hover {
+  background: #33272a;
+  color: #fffaf0;
+  transform: scale(1.05);
+}
+
+body.light-theme .grades-section h2{
+  color: #0f0e17;
+}
+
+body.light-theme .grades-table th,
+.grades-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+body.light-theme .grades-table th {
+  background: #1a1a24;
+  color: #fffaf0;
+}
+
+
+body.light-theme .attendance-table th {
+  background: #1a1a24;
+  color: #fffaf0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+
+body.light-theme {
+  background: #faeee7;
+  color: #33272a;
+}
+
+body.light-theme .main-content {
+  flex: 1;
+  padding: 2rem;
+  background: #ff8ba7;
+}
+
+body.light-theme h2{
+  color: #fffaf0;
+}
+
+body.light-theme .sidebar {
+  background: #fffaf0;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+body.light-theme .sidebar-header h2,
+body.light-theme .nav-menu li.active,
+body.light-theme .stat-card h3,
+body.light-theme .student-table th {
+  color: #33272a;
+}
+
+body.light-theme .nav-menu li {
+  color: #594a4e;
+}
+
+body.light-theme .nav-menu li:hover,
+body.light-theme .nav-menu li.active {
+  background: #ff8ba7;
+  color: #33272a;
+}
+
+body.light-theme .top-bar h1 {
+  color: #fffaf0;
+}
+
+body.light-theme .search-box {
+  background: #fff5ee;
+  color: #33272a;
+}
+
+body.light-theme .stat-card {
+  border-color: #ff8ba7;
+  background: #fffaf0;
+}
+
+body.light-theme .table-section,
+body.light-theme .attendance-section,
+body.light-theme .grades-section {
+  background: rgba(255, 255, 255, 0.7);
+  color: #33272a;
+}
+
+body.light-theme .student-table th {
+  background: #ffe4e1;
+}
+
+body.light-theme .student-table td,
+body.light-theme .attendance-table td {
+  color: #594a4e;
+}
+
+body.light-theme .edit-btn,
+body.light-theme .delete-btn {
+  color: #ff8ba7;
+}
+
+body.light-theme .edit-btn:hover {
+  color: #ffc6c7;
+}
+
+body.light-theme .delete-btn:hover {
+  color: #c3f0ca;
+}
+
+body.light-theme .stat-card p {
+  color: #33272a;
+}
+
+body.light-theme .user-avatar i {
+  color: #fffaf0;
+}
+
+body.light-theme .modal {
+  background: #fffaf0;
+  border: 1px solid #ffc6c7;
+  color: #33272a;
+}
+
+body.light-theme input,
+body.light-theme select,
+body.light-theme .btn {
+  background: #fffaf0;
+  color: #33272a;
+  border: 1px solid #ff8ba7;
+}
+
+body.light-theme .btn:hover {
+  background: #ff8ba7;
+  color: #fff;
+}
+
+
+
+/* dark-theme */
+body.dark-theme {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark-theme .sidebar,
+body.dark-theme .main-content,
+body.dark-theme .table-section,
+body.dark-theme .stats-grid .stat-card {
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+body.dark-theme .stat-card h3 {
+  color: #ff8906;
+}
+
+body.dark-theme .student-table th {
+  background: #2a2a3d;
+}
+
+body.dark-theme .student-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .search-box,
+body.dark-theme .grade-dropdown,
+body.dark-theme .edit-btn,
+body.dark-theme .delete-btn {
+  background: #222;
+  color: #fff;
+}
+
+/* === Layout === */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 250px;
+  background: #16161e;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+.sidebar-header h2 {
+  color: #ff8906;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu li {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  color: #a7a9be;
+  border-radius: 8px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.nav-menu li:hover,
+.nav-menu li.active {
+  background: #ff8906;
+  color: #fffffe;
+  transform: translateX(4px);
+}
+
+/* === Main Content === */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: #0f0e17;
+}
+
+/* === Top Bar === */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.top-bar h1 {
+  font-size: 2rem;
+  color: #fffffe;
+}
+
+.search-box {
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #16161e;
+  color: #fffffe;
+  outline: none;
+}
+
+.user-avatar i {
+  font-size: 1.8rem;
+  color: #ff8906;
+  margin-left: 1rem;
+}
+
+.top-actions{
+  display: flex;
+  align-items: center;
+}
+
+/* === Stats Cards === */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid #ff8906;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.4s ease, background 0.3s ease;
+}
+
+.stat-card h3 {
+  color: #f25f4c;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  color: #fffffe;
+  font-weight: bold;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  background: #16161e;
+}
+
+/* === Table === */
+.table-section {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.table-section h2 {
+  margin-bottom: 1.5rem;
+  color: #ff8906;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fffffe;
+}
+
+.student-table th,
+.student-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.student-table th {
+  background: #1a1a24;
+  color: #ff8906;
+}
+
+.student-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* === Actions === */
+.edit-btn,
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ec7f37;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.delete-btn {
+  color: #e53170;
+}
+
+.edit-btn:hover {
+  color: #ff8906;
+  transform: scale(1.2);
+}
+
+.delete-btn:hover {
+  color: red;
+  transform: rotate(10deg);
+}
+
+
+
+/* === Attendance Section === */
+.attendance-section {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  animation: fadeSlideIn 0.5s ease;
+}
+
+.attendance-section h2 {
+  color: #ff8906;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* === Table === */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #16161e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.attendance-table th {
+  background: #1a1a24;
+  color: #ff8906;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.attendance-table td {
+  color: #fffffe;
+  font-size: 0.95rem;
+}
+
+.attendance-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s ease;
+}
+
+/* === Status Color Tags === */
+.attendance-table td.status-present {
+  color: #16e06f;
+  font-weight: bold;
+}
+
+.attendance-table td.status-absent {
+  color: #e53170;
+  font-weight: bold;
+}
+
+.attendance-table td.status-leave {
+  color: #facc15;
+  font-weight: bold;
+}
+
+/* === Grades Section === */
+.grades-section {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.grades-section h2 {
+  color: #ff8906;
+  margin-bottom: 1.5rem;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fffffe;
+}
+
+.grades-table th,
+.grades-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+.grades-table th {
+  background: #1a1a24;
+  color: #ff8906;
+}
+
+.grades-table tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.grade-input {
+  padding: 0.4rem 0.6rem;
+  width: 60px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #16161e;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.grade-input:focus {
+  border-color: #ff8906;
+  background: #1f1f29;
+}
+
+/* === Settings Section === */
+.settings-section {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.settings-section h2 {
+  color: #ff8906;
+  margin-bottom: 1.5rem;
+}
+
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.settings-panel button {
+  padding: 0.8rem 1.2rem;
+  background: #ff8906;
+  color: #fffffe;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.settings-panel button:hover {
+  background: #f25f4c;
+  transform: scale(1.05);
+}
+
+
+
+
+/* === Animation === */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .attendance-table th,
+  .attendance-table td {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .attendance-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* === Modal Overlay === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(15, 14, 23, 0.9);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* === Modal Box === */
+.modal {
+  background: #16161e;
+  color: #fffffe;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: popFade 0.4s ease;
+}
+
+.modal h2 {
+  color: #ff8906;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  background: #0f0e17;
+  color: #fffffe;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #292936;
+  transition: border 0.3s ease;
+}
+
+.modal input:focus {
+  border-color: #ff8906;
+}
+
+/* === Modal Buttons === */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.submit-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn {
+  background: #ff8906;
+  color: #0f0e17;
+}
+
+.submit-btn:hover {
+  background: #ec7f37;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #292936;
+  color: #fffffe;
+}
+
+.cancel-btn:hover {
+  background: #f25f4c;
+  transform: translateY(-2px);
+}
+
+/* === Floating Add Button === */
+.add-student-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #ff8906;
+  color: #fffffe;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 10000;
+}
+
+.add-student-btn:hover {
+  background: #e25c08;
+  transform: scale(1.1);
+}
+
+
+
+@keyframes popFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* === Mobile Fix === */
+@media (max-width: 500px) {
+  .modal {
+    margin: 1rem;
+  }
+}
+
+
+/* === Animations === */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, #ff890611, transparent),
+              radial-gradient(circle at 70% 80%, #f25f4c11, transparent);
+  z-index: -1;
+  animation: bgFloat 10s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+  0%, 100% { background-position: 30% 20%, 70% 80%; }
+  50% { background-position: 35% 25%, 65% 75%; }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Responsive to the grade and settings */
+@media (max-width: 768px) {
+  .grades-table th,
+  .grades-table td {
+    padding: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .grade-input {
+    width: 50px;
+  }
+
+  .settings-panel {
+    gap: 0.7rem;
+  }
+
+  .settings-panel button {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Management Dashboard | Mukesh</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-user-graduate"></i> EduDash</h2>
+      </div>
+    <nav class="nav-menu">
+        <ul>
+            <li class="active" data-section="dashboard"><i class="fas fa-chart-line"></i> Dashboard</li>
+            <li data-section="students"><i class="fas fa-users"></i> Students</li>
+            <li data-section="attendance"><i class="fas fa-calendar-check"></i> Attendance</li>
+            <li data-section="grades"><i class="fas fa-file-alt"></i> Grades</li>
+            <li data-section="settings"><i class="fas fa-cog"></i> Settings</li>
+        </ul>
+    </nav>
+    </aside>
+
+        <main class="main-content">
+
+        <!-- Dashboard Section -->
+        <section id="dashboard-section" class="content-section">
+            <!-- Top Bar -->
+            <header class="top-bar">
+            <h1>Student Management</h1>
+            <div class="top-actions">
+                <input type="text" placeholder="Search students..." class="search-box"/>
+                <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+            </div>
+            </header>
+
+            <!-- Dashboard Stats -->
+            <section class="stats-grid">
+            <div class="card stat-card">
+                <h3>Total Students</h3>
+                <p id="total-students">128</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Present Today</h3>
+                <p id="present-today">102</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Average Grade</h3>
+                <p>84%</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Alerts</h3>
+                <p>5</p>
+            </div>
+            </section>
+        </section>
+
+        <!-- Students Section -->
+        <section id="students-section" class="content-section" style="display: none;">
+            <h2>Student Records</h2>
+            <table class="student-table">
+            <thead>
+                <tr>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Course</th>
+                <th>Attendance</th>
+                <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="student-body">
+                <!-- JS-injected student rows will appear here -->
+            </tbody>
+            </table>
+        </section>
+
+        <!-- Attendance Section -->
+        <section id="attendance-section" class="content-section" style="display: none;">
+            <h2>Attendance Overview</h2>
+            <table class="attendance-table">
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="attendance-body">
+                <!-- Rows will be injected by JS -->
+            </tbody>
+            </table>
+        </section>
+
+        <!-- Grades Section -->
+        <section class="grades-section content-section" id="grades-section" style="display: none;">
+          <h2>Student Grades</h2>
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Course</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody id="grades-body">
+              <!-- JS-injected rows -->
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Settings Section -->
+        <section class="settings-section content-section" id="settings-section" style="display: none;">
+          <h2>Settings</h2>
+          <div class="settings-panel">
+            <button id="reset-data-btn">🧹 Clear All Data</button>
+            <button id="toggle-theme-btn">🌓 Toggle Theme</button>
+          </div>
+        </section>
+
+        </main>
+  </div>
+
+<!-- Add Student Button -->
+<button class="add-student-btn" id="open-modal-btn"><i class="fas fa-user-plus"></i></button>
+
+<!-- Modal Container -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2>Add New Student</h2>
+    <input type="text" id="student-name" placeholder="Full Name" required />
+    <input type="text" id="student-id" placeholder="Student ID" required />
+    <input type="text" id="student-course" placeholder="Course (e.g. B.Tech CSE)" required />
+    <input type="number" id="student-attendance" placeholder="Attendance (%)" min="0" max="100" required />
+    <input type="text" id="student-photo" placeholder="Photo URL (optional)" />
+    <div class="form-buttons">
+      <button class="submit-btn" id="submit-student">Add</button>
+      <button class="cancel-btn" id="cancel-modal">Cancel</button>
+    </div>
+  </div>
+</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
